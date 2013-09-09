@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project billing with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/home/rdouman/test/cNetBilling.jar">
+            <manifest>
+                <attribute name="Main-Class" value="communinet.billing.driver"/>
+                <attribute name="Class-Path" value=". cNetBilling_lib/derbyclient.jar cNetBilling_lib/jnetpcap.jar cNetBilling_lib/derbyLocale_cs.jar cNetBilling_lib/derbyLocale_de_DE.jar cNetBilling_lib/derbyLocale_es.jar cNetBilling_lib/derbyLocale_fr.jar cNetBilling_lib/derbyLocale_hu.jar cNetBilling_lib/derbyLocale_it.jar cNetBilling_lib/derbyLocale_ja_JP.jar cNetBilling_lib/derbyLocale_ko_KR.jar cNetBilling_lib/derbyLocale_pl.jar cNetBilling_lib/derbyLocale_pt_BR.jar cNetBilling_lib/derbyLocale_ru.jar cNetBilling_lib/derbyLocale_zh_CN.jar cNetBilling_lib/derbyLocale_zh_TW.jar cNetBilling_lib/derby.jar cNetBilling_lib/logback-classic-1.0.6.jar cNetBilling_lib/slf4j-api-1.6.6.jar cNetBilling_lib/logback-core-1.0.6.jar"/>
+            </manifest>
+            <fileset dir="/home/rdouman/workspace/billing/bin"/>
+        </jar>
+        <delete dir="/home/rdouman/test/cNetBilling_lib"/>
+        <mkdir dir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyclient.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/jnetpcap-1.3.0/jnetpcap.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_cs.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_de_DE.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_es.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_fr.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_hu.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_it.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_ja_JP.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_ko_KR.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_pl.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_pt_BR.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_ru.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_zh_CN.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derbyLocale_zh_TW.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/db-derby-10.8.2.2-bin/lib/derby.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/logging/logback-1.0.6/logback-classic-1.0.6.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/logging/slf4j-1.6.6/slf4j-api-1.6.6.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+        <copy file="/home/rdouman/workspace/billing/third_party/logging/logback-1.0.6/logback-core-1.0.6.jar" todir="/home/rdouman/test/cNetBilling_lib"/>
+    </target>
+</project>
