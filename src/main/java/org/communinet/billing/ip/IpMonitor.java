@@ -36,7 +36,7 @@ public class IpMonitor extends Thread {
 
 	private Map<NetworkTraffic, Long> trafficMap = new Hashtable <NetworkTraffic, Long>();
 
-	private static IpRangeFilter ipRangeFilter;
+	private IpRangeFilter ipRangeFilter;
 
 
 
