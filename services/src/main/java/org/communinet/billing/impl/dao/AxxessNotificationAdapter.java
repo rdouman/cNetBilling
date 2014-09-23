@@ -22,22 +22,22 @@ public class AxxessNotificationAdapter implements INotificationAdapter {
 
 	private String configFilename = "config/smtp.properties";
 	private Session session;
-	private String axxessUsername="dou17";
-	private String axxessPassword="dytqt";
+	private String axxessUsername="";
+	private String axxessPassword="";
 	
 	static final Logger logger = LoggerFactory
 			.getLogger(AxxessNotificationAdapter.class);
 
 	public AxxessNotificationAdapter() {
 		
-		final String username = "rdouman@gmail.com";
-		final String password = "d8gmail2ay";
+		final String username = "";
+		final String password = "";
 		
 		session = getSmtpSession(username, password);
 	}
 	
 	public void notifyCustomer(String mobileNumber, String message) {
-		sendNotification(mobileNumber+"@sms.axxess.co.za", "admin@communinet.co.za", axxessUsername+":"+axxessPassword, message);
+		sendNotification(mobileNumber+"@sms.axxess.co.za", "", axxessUsername+":"+axxessPassword, message);
 	}
 
 	private void sendNotification(String toEmail, String fromEmail,
@@ -101,11 +101,6 @@ public class AxxessNotificationAdapter implements INotificationAdapter {
 
 	public static void main(String[] args) {
 		AxxessNotificationAdapter test = new AxxessNotificationAdapter();
-		//test.sendNotification("support@communinet.co.za", "rdouman@gmail.com", "Yet another test support", "Woohoo this works");
-		//test.sendNotification("admin@communinet.co.za", "rdouman@gmail.com", "Yet another test admin", "Woohoo this works");
-		test.notifyCustomer("+27794808622", "This is a test");
-		
-		//test.sendNotification("info@communinet.co.za", "admin@communinet.co.za", "Yet another test info", "Woohoo this works");
 	}
 	// public void updateNot
 }

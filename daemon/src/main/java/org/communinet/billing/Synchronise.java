@@ -1,11 +1,6 @@
 package org.communinet.billing;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
 
 import org.communinet.billing.domain.IPTraffic;
